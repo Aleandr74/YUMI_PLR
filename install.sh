@@ -11,8 +11,8 @@ if [ -n "$SUDO_USER" ]; then
     echo "shell script execute by with sudo :  user is $SUDO_USER"
     if [ "$SUDO_USER" = "runner" ]; then
         # Définir USER_HOME spécifiquement pour 'runner' et définir OWNER à 'pi'
-        USER_HOME="/home/pi"
-        OWNER="pi"
+        USER_HOME="/home/alex"
+        OWNER="alex"
     else
         USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
         OWNER="$SUDO_USER"
@@ -142,7 +142,7 @@ else
 [update_manager YUMI_PLR]
 type: git_repo
 path: ~/YUMI_PLR
-origin: https://github.com/Yumi-Lab/YUMI_PLR.git
+origin: https://github.com/Aleandr74/YUMI_PLR.git
 primary_branch: main
 install_script: install.sh
 is_system_service: False
